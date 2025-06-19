@@ -1,4 +1,5 @@
 import {test, expect} from '@playwright/test'
+import { argosScreenshot } from "@argos-ci/playwright";
 
 
 
@@ -20,6 +21,7 @@ test('TaxCaddy Consumer - Verify Dashboard', async ({page}) => {
     
      // const frame = page.frameLocator('[aria-live="polite"] iframe')
      const frame = page.frameLocator('iframe[src*="foxit"]'); 
+     await argosScreenshot(page, "homepage");
 
      // some quick assertion if I can get attribute values should return visibility: hidden
      const getattr = await frame.locator('[fieldname="SchE_PropertyLocation"]').locator('div').first().getAttribute('style');
@@ -37,6 +39,7 @@ test('TaxCaddy Consumer - Verify Dashboard', async ({page}) => {
 
      //hover mouse over the initial dom
         await page.locator('.CRjrc').hover();
+        await argosScreenshot(page, "homepage");
 
 
 
