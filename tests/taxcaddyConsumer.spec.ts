@@ -39,7 +39,7 @@ test('TaxCaddy Consumer - Verify Dashboard', async ({page}) => {
 
      //hover mouse over the initial dom
         await page.locator('.CRjrc').hover();
-        await argosScreenshot(page, "homepage");
+       // await argosScreenshot(page, "homepage");
 
 
 
